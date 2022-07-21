@@ -74,7 +74,7 @@ function onClickRefreshButton() {
   document.location.reload();
 }
 function TimerShow() {
-  selectedDate -= 144000; //прискорення часу
+  //selectedDate -= 144000; //прискорення часу
   const DifferenceTime = selectedDate - Date.now();
   if (DifferenceTime <= 0) {
     clearInterval(timer);
