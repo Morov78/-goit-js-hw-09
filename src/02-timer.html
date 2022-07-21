@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown timer</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body class="body-timer">
+    <p><a href="index.html">Go back</a></p>
+
+    <div class="output-timer">
+      <input class="js-input" type="text" id="datetime-picker" />
+      <button type="button" disabled data-start>Start</button>
+      <button type="button" data-stop>Refresh</button>
+    </div>
+
+    <div class="timer">
+      <div class="field">
+        <span class="value" data-days>00</span>
+        <span class="label">Days</span>
+        <canvas id="stockGraph" data-days width="0" height="0"></canvas>
+      </div>
+      <div class="field">
+        <span class="value" data-hours>00</span>
+        <span class="label">Hours</span>
+        <canvas id="stockGraph" data-hours width="0" height="0"> </canvas>
+      </div>
+      <div class="field">
+        <span class="value" data-minutes>00</span>
+        <span class="label">Minutes</span>
+        <canvas id="stockGraph" data-minutes width="0" height="0"> </canvas>
+      </div>
+      <div class="field">
+        <span class="value" data-seconds>00</span>
+        <span class="label">Seconds</span>
+        <canvas id="stockGraph" data-seconds width="0" height="0"> </canvas>
+      </div>
+    </div>
+    <audio class="audio" src="timer.mp3" preload="auto"></audio>
+
+    <script src="js/02-timer.js" type="module"></script>
+  </body>
+</html>
