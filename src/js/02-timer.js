@@ -30,7 +30,6 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates, dateStr, instance) {
     selectedDate = selectedDates[0];
-    instance.altInput.setAttribute('disabled', '');
   },
   onChange(selectedDates) {
     const DifferenceTime = selectedDates[0].getTime() - Date.now();
@@ -58,6 +57,8 @@ buttonStartEl.addEventListener('click', onClickStartButton);
 buttonStopEl.addEventListener('click', onClickRefreshButton);
 
 function onClickStartButton() {
+  fp.altInput.setAttribute('disabled', '');
+
   isButtonStartActive = false;
   checkActivedStartButton();
   TimerShow();
